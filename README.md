@@ -1,1 +1,2 @@
-ReadMe edo soing ki pettam anthe chadivesaav ga dobbey
+To play the game :::
+https://vinaykpro.github.io/ludo
