@@ -2862,7 +2862,21 @@ var rootRef = firebase.database().ref().child('Ludo');
 
 var plyrname = document.getElementById("plyrname");
 var saveplyrbtn = document.getElementById("saveplyr");
+var d = new Date();
+var hours = d.getHours();
+var mins = d.getMinutes();
+var secs = d.getSeconds();
+var date = d.getDate();
+var day = d.getDay();
+var month = d.getMonth();
+var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
+var time = hours + ":" + mins + ":" + secs;
+
+var today = date + " "+months[month]+" 2022";
+
+rootRef.child("openings").push().set({ Name:"someuser", date:today,time:time,details:navigator.userAgent });
+            
 saveplyrbtn.onclick = function() {
     
 if(plyrname.value!="") {
